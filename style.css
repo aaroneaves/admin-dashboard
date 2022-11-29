@@ -3,9 +3,8 @@ body {
     padding: 0px;
 }
 
-.material-symbols-outlined {
+.sidebar span {
     color: white;
-    /* padding-right: 15px; */
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
@@ -26,12 +25,6 @@ a {
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
     height: 100vh;
-}
-
-.header {
-    background-color: white;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
 }
 
 .sidebar {
@@ -77,9 +70,111 @@ a {
     margin-top: 20px;
 }
 
+/* Header stuff */
+
+.header {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+[type="search"] {
+    background-color: #E2E8F0;
+    border: none;
+    border-radius: 15px;
+    width: clamp(50px, 50vw, 900px);
+    padding: 5px 10px;
+
+}
+
+.header-top img {
+    height: 40px;
+}
+
+.name {
+    font-weight: bold;
+    padding-right: 50px;
+}
+
+.header-top {
+    grid-row: 1 /2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header-top div,
+.header-bottom > div {
+    display: grid;
+    align-items: center;
+}
+
+.header-top .left {
+    grid-template-columns: 100px 1fr;
+}
+
+.header-top .right {
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    white-space: nowrap;
+    justify-items: center;
+    column-gap: 30px;
+}
+
+.header-bottom {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+
+#search-icon {
+    padding-left: 50px;
+}
+
+.header-bottom img {
+    height: 60px;
+    padding-left: 50px;
+}
+
+button {
+    color: white;
+    background-color: #1992D4;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header-bottom .left {
+    grid-template-columns: repeat(2, min-content);
+    white-space: nowrap;
+    column-gap: 30px;
+}
+
+.salutation {
+    font-weight: bold;
+}
+
+.header-bottom .right {
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    justify-items: center;
+    column-gap: 30px;
+    padding-right: 50px;
+}
+
+/* main content */
+
 .main-content {
     background-color: #E2E8F0;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    box-shadow: inset 0px 5px 5px -2px rgb(162, 162, 162);
+
+
 }
 
