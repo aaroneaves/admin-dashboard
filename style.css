@@ -1,3 +1,5 @@
+/*         Global            */
+
 body {
     margin: 0px;
     padding: 0px;
@@ -7,26 +9,32 @@ body {
     font-size: 22px;
 }
 
-.big-container {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
-    height: 100vh;
-}
-
 @font-face {
     font-family: odin-font;
     src: url(./Norse-Bold.otf);
 }
 
-.material-symbols-outlined:not(#search-icon):hover, 
+.material-symbols-outlined:hover, 
 #first-side-group img:hover,
 .header img,
 button,
 .panel-one p:hover,
 .panel-two img,
-.panel-two div {
+.panel-two div,
+.card img {
     cursor: pointer;
+}
+
+#indicator,
+#search-icon {
+    cursor: default;
+}
+
+.big-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    height: 100vh;
 }
 
 /*         Sidebar            */
@@ -49,6 +57,10 @@ button,
     'wght' 400,
     'GRAD' 0,
     'opsz' 24
+}
+
+#indicator {
+    font-size: 20px;
 }
 
 a {
@@ -86,7 +98,6 @@ a {
     gap: 15px;
 }
 
-
 .side-group div {
     display: grid;
     grid-template-columns: 1fr 6fr;
@@ -98,7 +109,17 @@ a {
     margin-top: 40px;
 }
 
+.sidebar .material-symbols-outlined:active,
+.sidebar a:not(#logo):active,
+#first-side-group img:active {
+    transform: scale(.9) translateY(3px);
+}
+
 /*         Header            */
+
+#logo {
+    cursor:default;
+}
 
 .header {
     background-color: #F0F5F9;
@@ -129,12 +150,16 @@ a {
     border-radius: 40px;
 }
 
+button:active {
+    transform: scale(.95) translateY(3px);
+}
+
 .name {
     font-weight: bold;
 }
 
 [alt="The user's profile picture"] {
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .header-top {
@@ -207,7 +232,7 @@ button {
     justify-content: end;
     justify-items: center;
     column-gap: 30px;
-    padding-right: 50px;
+    padding-right: 40px;
 }
 
 /*         main content            */
@@ -217,7 +242,6 @@ button {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     box-shadow: inset 0px 5px 5px -2px rgb(162, 162, 162);
-
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 3fr 1fr;
@@ -242,14 +266,12 @@ button {
 #archives, 
 #title-two {
     margin-left: 20px;
-
 }
 
 .card-container {
     grid-row: 2 / 3;
     grid-column: 1 / 2;  
     margin-left: 50px;
-
     display: grid;
     grid-template-columns: repeat(2, min-content);
     grid-template-rows: repeat(3, min-content);
@@ -265,7 +287,6 @@ button {
     border-radius: 10px;
     padding: 10px 20px;
     box-shadow: 0px 7px 5px -2px rgb(162, 162, 162);
-
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: repeat(3, min-content);
@@ -276,6 +297,7 @@ button {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
     margin-bottom: 10px;
+    margin-left: 7px;
 }
 
 .card .img {
@@ -291,20 +313,18 @@ button {
 .character-image {
     height: 100px;
     border-radius: 15px;
+    margin-top: 0px;
 }
 
 p {
     color: grey;
     margin: 0px;
     padding: 0px;
-    /* margin-top: 5px;
-    margin-bottom: 5px; */
 }
 
 .icon-container {
     grid-row: -1 / -2;
     grid-column: -1 / -2; 
-
     display: grid;
     grid-template-columns: repeat(3, min-content);
     column-gap: 12px;
@@ -348,7 +368,6 @@ strong {
     column-gap: 20px;
     align-items: center;
     padding-left: 30px;
-
 }
 
 .heading {
@@ -365,25 +384,10 @@ strong {
     color: #333333;
 }
 
-.sidebar .material-symbols-outlined:active,
-.sidebar a:not(#logo):active,
-#first-side-group img:active {
-    transform: scale(.9) translateY(3px);
-}
-
-button:active {
-    transform: scale(.95) translateY(3px);
-}
-
-#logo {
-    cursor:default;
-}
-
 .middle-party {
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     padding: 10px 0px;
-
 }
 
 .panel-two div {
@@ -392,7 +396,7 @@ button:active {
 }
 
 .panel-two img {
-    height: 40px;
+    height: 50px;
     border-radius: 10px;
 }
 
